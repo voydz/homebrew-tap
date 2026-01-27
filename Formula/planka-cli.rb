@@ -1,7 +1,6 @@
 class PlankaCli < Formula
   desc "CLI for Planka using plankapy"
   homepage "https://github.com/voydz/planka-cli"
-  version "0.1.0"
   url "https://github.com/voydz/planka-cli/releases/download/v0.1.0/planka-cli-0.1.0-macos.tar.gz"
   sha256 "replace_with_sha256"
 
