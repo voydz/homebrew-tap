@@ -1,18 +1,33 @@
-# Voydz Tap
+# homebrew-tap
 
-## How do I install these formulae?
+Private Homebrew tap for `planka-cli` and future formulas.
 
-`brew install voydz/tap/<formula>`
+## Install
 
-Or `brew tap voydz/tap` and then `brew install <formula>`.
-
-Or, in a `brew bundle` `Brewfile`:
-
-```ruby
-tap "voydz/tap"
-brew "<formula>"
+```bash
+brew tap voydz/homebrew-tap
+brew install planka-cli
 ```
 
-## Documentation
+## Release workflow
 
-`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
+1. Build the binary in the app repo:
+   ```bash
+   make build
+   ```
+2. Package the binary (tarball must contain `planka-cli` at the root):
+   ```bash
+   tar -czf planka-cli-0.1.0-macos.tar.gz -C dist planka-cli
+   ```
+3. Upload the tarball to a GitHub release for the app repo.
+4. Update `Formula/planka-cli.rb`:
+   - `url` to the release asset
+   - `version` to the release version
+   - `sha256` to the asset checksum:
+     ```bash
+     shasum -a 256 planka-cli-0.1.0-macos.tar.gz
+     ```
+
+## Notes
+
+- Update the formula per release (version, url, sha256).
