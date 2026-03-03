@@ -1,8 +1,8 @@
 class GarminCli < Formula
   desc "CLI for reading health data from Garmin Connect"
   homepage "https://github.com/voydz/garmin-cli"
-  url "https://github.com/voydz/garmin-cli/releases/download/v0.1.10/garmin-cli-0.1.10-macos.tar.gz"
-  sha256 "aba1c317e7736494292d65255a97b207da796f34f47c757342bc02876cf56abd"
+  url "https://github.com/voydz/garmin-cli/releases/download/v0.2.0/garmin-cli-0.2.0-macos.tar.gz"
+  sha256 "692819e2c010d0fee0bb72439e68e9139e45875d41cda1ace78b0c04b7d8ce4d"
 
   def install
     bin.install "gc"
