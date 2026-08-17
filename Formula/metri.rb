@@ -1,15 +1,22 @@
 class Metri < Formula
   desc "CLI for logging and querying health/fitness metrics"
   homepage "https://github.com/voydz/metri"
-  version "0.3.3"
+  # Also the macOS default: brew style rejects url/sha256 directly inside on_macos,
+  # and nesting them under on_arm would leave Intel macOS with no url at all, which
+  # makes `brew readall --arch=all` fail. The on_macos guard below rejects Intel
+  # hosts before this binary can be installed on one.
+  url "https://github.com/voydz/metri/releases/download/v0.3.3/metri-0.3.3-darwin-arm64.tar.gz"
+  sha256 "fb2e306347849297e665130d3436a04343ee81795fa2710f19a3d32669e483de"
   license "MIT"
+
+  livecheck do
+    url :homepage
+    strategy :github_latest
+  end
 
   on_macos do
     # Prebuilt binaries are published for Apple Silicon only.
     depends_on arch: :arm64
-
-    url "https://github.com/voydz/metri/releases/download/v0.3.3/metri-0.3.3-darwin-arm64.tar.gz"
-    sha256 "fb2e306347849297e665130d3436a04343ee81795fa2710f19a3d32669e483de"
   end
 
   on_linux do
@@ -22,11 +29,6 @@ class Metri < Formula
       url "https://github.com/voydz/metri/releases/download/v0.3.3/metri-0.3.3-linux-arm64.tar.gz"
       sha256 "207e16665d2309d778e10c9868d5e3bcda0f6caf4cce4ed0c3cd9cb7326646b2"
     end
-  end
-
-  livecheck do
-    url :homepage
-    strategy :github_latest
   end
 
   def install
