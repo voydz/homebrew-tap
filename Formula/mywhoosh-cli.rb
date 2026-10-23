@@ -1,5 +1,5 @@
 class MywhooshCli < Formula
-  desc "Download original MyWhoosh activity FIT files from the command line"
+  desc "Download original MyWhoosh activity FIT files from the command-line"
   homepage "https://github.com/voydz/mywhoosh-cli"
   license "MIT"
 
