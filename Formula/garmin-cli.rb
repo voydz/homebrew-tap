@@ -4,28 +4,29 @@ class GarminCli < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/voydz/garmin-cli/releases/download/v0.3.1/garmin-cli-0.3.1-macos-arm64.tar.gz"
-      sha256 "99bc56a18505cf5b5f5a08053b0c527bf2486acb1a7da28333971ba2bc37c891"
+      url "https://github.com/voydz/garmin-cli/releases/download/v0.4.0/garmin-cli-0.4.0-macos-arm64.tar.gz"
+      sha256 "969adb9a4431684e7202bdffa1ad4e7e2c2556db0aef86b15a338066390b99c5"
     end
     on_intel do
-      url "https://github.com/voydz/garmin-cli/releases/download/v0.3.1/garmin-cli-0.3.1-macos-x86_64.tar.gz"
-      sha256 "398e1ef07d183f0cad1308f01a1c65d76e2c31420a9bfbc93f1b3a6339da4fb6"
+      url "https://github.com/voydz/garmin-cli/releases/download/v0.4.0/garmin-cli-0.4.0-macos-x86_64.tar.gz"
+      sha256 "9f0c95f46948638d154db86daf7d71ed6fad259224cff5bd55e6be11d5b2122a"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/voydz/garmin-cli/releases/download/v0.3.1/garmin-cli-0.3.1-linux-x86_64.tar.gz"
-      sha256 "381f94902d91c2e60fae14003672046db1612093f8f75b7be40aecaf88a7a1c3"
+      url "https://github.com/voydz/garmin-cli/releases/download/v0.4.0/garmin-cli-0.4.0-linux-x86_64.tar.gz"
+      sha256 "b8ee9be3f7d843a14fc4d3b7e8c89b930528d3fa417f6d63bdbae06becb61af7"
     end
     on_arm do
-      url "https://github.com/voydz/garmin-cli/releases/download/v0.3.1/garmin-cli-0.3.1-linux-aarch64.tar.gz"
-      sha256 "d8e9d570aa5c2243809d24ef30f6994ccd8933c715ee16ee09cfd645ca9823a3"
+      url "https://github.com/voydz/garmin-cli/releases/download/v0.4.0/garmin-cli-0.4.0-linux-aarch64.tar.gz"
+      sha256 "6f825cf59ff3418e9b8252750eb865ca514729696711c8d3bf3b788758dbc722"
     end
   end
 
   def install
     bin.install "gc"
+    doc.install "THIRD_PARTY_NOTICES.md"
   end
 
   test do
