@@ -5,23 +5,23 @@ class MywhooshCli < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/voydz/mywhoosh-cli/releases/download/v0.2.0/mywhoosh-cli-0.2.0-macos-arm64.tar.gz"
-      sha256 "94f3f646362cea64455187df587239b04302c9eaefabd7117a2f2281ad395885"
+      url "https://github.com/voydz/mywhoosh-cli/releases/download/v0.3.0/mywhoosh-cli-0.3.0-macos-arm64.tar.gz"
+      sha256 "2565d4a373c8f3dfe504fc1e8f54c3fbbaabe203c2b792a0d609928c1480c237"
     end
     on_intel do
-      url "https://github.com/voydz/mywhoosh-cli/releases/download/v0.2.0/mywhoosh-cli-0.2.0-macos-x86_64.tar.gz"
-      sha256 "98947dbd4a7bb53d2b2d4e0d2551acede056a2bbd260c2ac35a607f40b95bd2b"
+      url "https://github.com/voydz/mywhoosh-cli/releases/download/v0.3.0/mywhoosh-cli-0.3.0-macos-x86_64.tar.gz"
+      sha256 "3609fb7c33c84169445dcbf063abe256c80f9e2c02a36cc2a279ed4a07d7db16"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/voydz/mywhoosh-cli/releases/download/v0.2.0/mywhoosh-cli-0.2.0-linux-x86_64.tar.gz"
-      sha256 "c6600f75f7754c92df9fa4b511c65249254cc43e388d943839ecf5f8f509f6e8"
+      url "https://github.com/voydz/mywhoosh-cli/releases/download/v0.3.0/mywhoosh-cli-0.3.0-linux-x86_64.tar.gz"
+      sha256 "29de7f2632885907f2e94bfbd719507ac5583b1aaee521c5ed2bc355758e0f5f"
     end
     on_arm do
-      url "https://github.com/voydz/mywhoosh-cli/releases/download/v0.2.0/mywhoosh-cli-0.2.0-linux-aarch64.tar.gz"
-      sha256 "faabc0370118dba8032041cddb6b669ee6773f15619cb5c5105e80d74a043e67"
+      url "https://github.com/voydz/mywhoosh-cli/releases/download/v0.3.0/mywhoosh-cli-0.3.0-linux-aarch64.tar.gz"
+      sha256 "57c29145613024c6c423b0133404799099b87bd09385ed8849382729c886a4e2"
     end
   end
 
